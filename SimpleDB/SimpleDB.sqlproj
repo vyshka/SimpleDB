@@ -57,5 +57,18 @@
   <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
   <ItemGroup>
     <Folder Include="Properties" />
+    <Folder Include="Tables" />
+    <Folder Include="Views" />
+    <Folder Include="StoredProcedures" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="Tables\User.sql" />
+    <Build Include="Tables\Task.sql" />
+    <Build Include="Tables\UserTask.sql" />
+    <Build Include="Views\vUserTask.sql" />
+    <Build Include="StoredProcedures\spDeleteTask.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <RefactorLog Include="SimpleDB.refactorlog" />
   </ItemGroup>
 </Project>
