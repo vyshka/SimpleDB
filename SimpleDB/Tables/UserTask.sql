@@ -1,6 +1,6 @@
 ﻿CREATE TABLE [dbo].[UserTask]
 (
-	[UserTaskId] INT NOT NULL PRIMARY KEY, 
+	[UserTaskId] INT NOT NULL IDENTITY(1,1) PRIMARY KEY, 
     [UserId] INT NOT NULL, 
     [TaskId] INT NOT NULL, 
     CONSTRAINT [FK_UserTask_ToTask] FOREIGN KEY ([TaskId]) REFERENCES [Task]([TaskId]), 
